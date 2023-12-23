@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.input-base {
+  @apply bg-transparent border-2 border-slate-500 p-2 rounded-lg w-full placeholder:text-slate-500;
+}
+
+input:checked ~ .dot {
+  transform: translateX(18px);
+}
+
+input:focus ~ .dot {
+  box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.5);
+}
+
+input:checked ~ .block {
+  background-color: #14d521;
+}
+
+.dot {
+  transition: transform 0.2s ease-in-out;
+}
+
+.block {
+  transition: background-color 0.2s ease-in-out;
+}
